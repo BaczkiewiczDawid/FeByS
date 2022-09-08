@@ -25,7 +25,7 @@ const Navbar = () => {
           <Hamburger
             toggled={isOpen}
             toggle={setIsOpen}
-            color={isOpen ? "#fafafa" : "#2a2a2a"}
+            color="#fafafa"
           />
         </HamburgerWrapper>
       )}

@@ -31,7 +31,6 @@ export const Wrapper = styled.div`
     left: auto;
 
     a {
-      color: #2a2a2a;
       margin: 0 1rem;
       text-align: center;
     }

@@ -7,9 +7,9 @@ import {
   NewsWrapper,
   SingleNews,
   NewsList,
+  StyledLink
 } from "../styles/Home.style";
 import dummyImage from "../images/dummyImage.jpg";
-import { Link } from "gatsby";
 
 const Home = () => {
   return (
@@ -34,7 +34,7 @@ const Home = () => {
             <h2>Tytuł</h2>
           </SingleNews>
         </NewsList>
-        <Link to="/aktualnosci">Zobacz więcej</Link>
+        <StyledLink to="/aktualnosci">Zobacz więcej</StyledLink>
       </NewsWrapper>
     </Layout>
   );

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "gatsby";
 
 export const Wrapper = styled.div`
   position: absolute;
@@ -13,19 +14,22 @@ export const Wrapper = styled.div`
     left: 0;
     z-index: -2;
     width: 100vw;
-    height: 200vh;
+    min-height: 1200px;
+    height: 175vh;
   }
 
   @media screen and (min-width: 768px) {
     img {
       height: 100vh;
+      min-height: 600px;
     }
   }
 `;
 
 export const Overlay = styled.div`
   width: 100vw;
-  height: 200vh;
+  min-height: 1200px;
+  height: 175vh;
   position: absolute;
   background-color: #2a2a2a;
   opacity: 0.75;
@@ -33,6 +37,7 @@ export const Overlay = styled.div`
 
   @media screen and (min-width: 768px) {
     height: 100vh;
+    min-height: 600px;
   }
 `;
 
@@ -43,10 +48,31 @@ export const NewsWrapper = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  a {
+    text-decoration: none;
+    color: #fafafa;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-top: 2rem;
+  }
+
+  @media screen and (min-width: 1080px) {
+    font-size: 1.3rem;
+  }
+
+  @media screen and (min-width: 1440) {
+    font-size: 1.5rem;
+  }
 `;
 
 export const NewsList = styled.div`
-    margin-top: 1rem;
+  margin-top: 1rem;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
 `;
 
 export const SingleNews = styled.article`
@@ -54,6 +80,7 @@ export const SingleNews = styled.article`
   height: 12rem;
   position: relative;
   margin: 3rem 0;
+  cursor: pointer;
 
   img {
     object-fit: cover;
@@ -66,5 +93,40 @@ export const SingleNews = styled.article`
     top: 1rem;
     left: 1rem;
     font-size: 2rem;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+    transition: .2s;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 27vw;
+    height: 8rem;
+    margin: 3rem 1rem;
+  }
+
+  @media screen and (min-width: 1080px){
+    width: 25vw;
+    height: 11rem;
+    margin: 3rem 1rem;
+  }
+
+  @media screen and (min-width: 1440px){
+    width: 22vw;
+    height: 16rem;
+    margin: 5rem 2rem;
+  }
+`;
+
+export const StyledLink = styled(Link)`
+  @media screen and (min-width: 768px) {
+    font-size: 0.85rem;
+    margin-right: 68%;
+  }
+
+  @media screen and (min-width: 1440px) {
+    font-size: 1rem;
+    margin-right: 60%;
   }
 `;

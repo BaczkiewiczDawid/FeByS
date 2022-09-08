@@ -14,18 +14,21 @@ export const Wrapper = styled.div`
     left: 0;
     z-index: -2;
     width: 100vw;
+    min-height: 1200px;
     height: 175vh;
   }
 
   @media screen and (min-width: 768px) {
     img {
       height: 100vh;
+      min-height: 600px;
     }
   }
 `;
 
 export const Overlay = styled.div`
   width: 100vw;
+  min-height: 1200px;
   height: 175vh;
   position: absolute;
   background-color: #2a2a2a;
@@ -34,6 +37,7 @@ export const Overlay = styled.div`
 
   @media screen and (min-width: 768px) {
     height: 100vh;
+    min-height: 600px;
   }
 `;
 
@@ -52,6 +56,14 @@ export const NewsWrapper = styled.section`
 
   @media screen and (min-width: 768px) {
     margin-top: 2rem;
+  }
+
+  @media screen and (min-width: 1080px) {
+    font-size: 1.3rem;
+  }
+
+  @media screen and (min-width: 1440) {
+    font-size: 1.5rem;
   }
 `;
 
@@ -95,14 +107,15 @@ export const SingleNews = styled.article`
   }
 
   @media screen and (min-width: 1080px){
-    width: 29vw;
+    width: 25vw;
     height: 11rem;
+    margin: 3rem 1rem;
   }
 
   @media screen and (min-width: 1440px){
     width: 22vw;
     height: 16rem;
-    margin: 3rem 2rem;
+    margin: 5rem 2rem;
   }
 `;
 

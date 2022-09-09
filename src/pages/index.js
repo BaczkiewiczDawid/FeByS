@@ -7,13 +7,10 @@ import {
   NewsWrapper,
   StyledLink,
   EventsWrapper,
-  EventsContainer,
-  SingleEvent,
-  EventDetails,
-  ImageOverlay,
 } from "../styles/Home.style";
 import NewsList from "../components/Home/NewsList";
-import dummyImage from "../images/dummyImage.jpg";
+
+import EventsList from '../components/Home/EventsList';
 
 const Home = () => {
   return (
@@ -29,40 +26,7 @@ const Home = () => {
       </NewsWrapper>
       <EventsWrapper>
         <h2>Zawody</h2>
-        <EventsContainer>
-          <SingleEvent>
-            <img src={dummyImage} alt="dummyImage" />
-            <ImageOverlay />
-            <EventDetails>
-              <h3>Zima maraton 23</h3>
-              <p>Gliwice, 12.01.2024</p>
-            </EventDetails>
-          </SingleEvent>
-          <SingleEvent>
-            <img src={dummyImage} alt="dummyImage" />
-            <ImageOverlay />
-            <EventDetails>
-              <h3>Zima maraton 23</h3>
-              <p>Gliwice, 12.01.2024</p>
-            </EventDetails>
-          </SingleEvent>
-          <SingleEvent>
-            <img src={dummyImage} alt="dummyImage" />
-            <ImageOverlay />
-            <EventDetails>
-              <h3>Zima maraton 23</h3>
-              <p>Gliwice, 12.01.2024</p>
-            </EventDetails>
-          </SingleEvent>
-          <SingleEvent>
-            <img src={dummyImage} alt="dummyImage" />
-            <ImageOverlay />
-            <EventDetails>
-              <h3>Zima maraton 23</h3>
-              <p>Gliwice, 12.01.2024</p>
-            </EventDetails>
-          </SingleEvent>
-        </EventsContainer>
+        <EventsList />
       </EventsWrapper>
     </Layout>
   );

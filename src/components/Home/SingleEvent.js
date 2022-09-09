@@ -4,18 +4,18 @@ import {
   ImageOverlay,
   EventDetails,
 } from "../../styles/SingleEvent.style";
-import dummyImage from "../../images/dummyImage.jpg";
 import { Link } from "gatsby";
+import defaultImage from "../../images/dummyImage.jpg";
 
-const SingleEvent = ({ title, image, alt, details, slug }) => {
+const SingleEvent = ({ title, image = defaultImage, alt, details, slug }) => {
   return (
     <Link to={`zawody/${slug}`}>
       <SingleEventWrapper>
-        <img src={dummyImage} alt="dummyImage" />
+        <img src={image} alt={alt} />
         <ImageOverlay />
         <EventDetails>
-          <h3>Zima maraton 23</h3>
-          <p>Gliwice, 12.01.2024</p>
+          <h3>{title}</h3>
+          <p>{details}</p>
         </EventDetails>
       </SingleEventWrapper>
     </Link>

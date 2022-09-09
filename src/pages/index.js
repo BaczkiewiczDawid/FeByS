@@ -5,8 +5,6 @@ import {
   Wrapper,
   Overlay,
   NewsWrapper,
-  SingleNews,
-  NewsList,
   StyledLink,
   EventsWrapper,
   EventsContainer,
@@ -14,6 +12,7 @@ import {
   EventDetails,
   ImageOverlay,
 } from "../styles/Home.style";
+import NewsList from "../components/Home/NewsList";
 import dummyImage from "../images/dummyImage.jpg";
 
 const Home = () => {
@@ -25,20 +24,7 @@ const Home = () => {
       </Wrapper>
       <NewsWrapper>
         <h1>Aktualności</h1>
-        <NewsList>
-          <SingleNews>
-            <img src={dummyImage} alt="dummyImage" />
-            <h2>Tytuł</h2>
-          </SingleNews>
-          <SingleNews>
-            <img src={dummyImage} alt="dummyImage" />
-            <h2>Tytuł</h2>
-          </SingleNews>
-          <SingleNews>
-            <img src={dummyImage} alt="dummyImage" />
-            <h2>Tytuł</h2>
-          </SingleNews>
-        </NewsList>
+        <NewsList />
         <StyledLink to="/aktualnosci">Zobacz więcej</StyledLink>
       </NewsWrapper>
       <EventsWrapper>

@@ -7,12 +7,22 @@ import {
   NewsWrapper,
   StyledLink,
   EventsWrapper,
+  SponsorsWrapper,
 } from "../styles/Home.style";
 import NewsList from "../components/Home/NewsList";
-
-import EventsList from '../components/Home/EventsList';
+import EventsList from "../components/Home/EventsList";
+import logo from "../images/logo.png";
+import Slider from "react-slick";
 
 const Home = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 1500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+  };
+
   return (
     <Layout>
       <Wrapper>
@@ -28,6 +38,23 @@ const Home = () => {
         <h2>Zawody</h2>
         <EventsList />
       </EventsWrapper>
+      <SponsorsWrapper>
+        <h2>Sponsorzy & Partnerzy</h2>
+        <Slider {...settings}>
+          <div>
+            <img src={logo} alt="" />
+          </div>
+          <div>
+            <img src={logo} alt="" />
+          </div>
+          <div>
+            <img src={logo} alt="" />
+          </div>
+          <div>
+            <img src={logo} alt="" />
+          </div>
+        </Slider>
+      </SponsorsWrapper>
     </Layout>
   );
 };

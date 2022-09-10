@@ -103,3 +103,16 @@ export const EventsWrapper = styled.section`
     margin-top: 24rem;
   }
 `;
+
+export const SponsorsWrapper = styled.section`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #2a2a2a;
+  margin-top: 5rem;
+
+  h2 {
+    font-size: 2rem;
+  }
+`;

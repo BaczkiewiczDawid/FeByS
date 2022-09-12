@@ -147,3 +147,31 @@ export const LogoWrapper = styled.div`
     }
   } 
 `;
+
+export const Footer = styled.footer`
+  background-color: #2a2a2a;
+  min-height: 30vh;
+  height: auto;
+  width: 100vw;
+`;
+
+export const MainInformations = styled.div`
+  display: flex;
+  flex-direction: column;
+  color: #fafafa;
+  font-weight: 300;
+  font-size: .8rem;
+  padding: 1rem;
+
+  p {
+    padding: 1rem 0;
+  }
+`;
+
+export const SocialsWrapper = styled.div`
+  display: flex;
+
+  img {
+    padding: 1rem;
+  }
+`;

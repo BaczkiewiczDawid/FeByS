@@ -16,6 +16,7 @@ import {
 import NewsList from "../components/Home/NewsList";
 import EventsList from "../components/Home/EventsList";
 import logo from "../images/logo.png";
+import { graphql } from "gatsby";
 
 const responsive = {
   superLargeDesktop: {
@@ -36,7 +37,10 @@ const responsive = {
   },
 };
 
-const Home = () => {
+const Home = ({ data }) => {
+  const eventsList = data.allContentfulWydarzenia.nodes;
+  console.log(eventsList)
+
   return (
     <Layout>
       <Wrapper>
@@ -50,7 +54,7 @@ const Home = () => {
       </NewsWrapper>
       <EventsWrapper>
         <h2>Zawody</h2>
-        <EventsList />
+        <EventsList data={eventsList} />
       </EventsWrapper>
       <SponsorsWrapper>
         <h2>Sponsorzy & Partnerzy</h2>
@@ -64,9 +68,25 @@ const Home = () => {
           <img src={logo} alt="" />
         </LogoWrapper>
       </SponsorsWrapper>
-
     </Layout>
   );
 };
 
+export const query = graphql`
+  query {
+    allContentfulWydarzenia {
+      nodes {
+        title
+        description {
+          description
+        }
+        image {
+          url
+        }
+        slug
+        date
+      }
+    }
+  }
+`
 export default Home;

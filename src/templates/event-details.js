@@ -1,12 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import Layout from "../components/Layout";
-import { graphql } from "gatsby";
-import { Overlay, Wrapper, Content, Title } from "../styles/EventDetails.style";
+import { graphql, Link } from "gatsby";
+import {
+  Overlay,
+  Wrapper,
+  Content,
+  Title,
+  Navigation,
+} from "../styles/EventDetails.style";
+import { NavigationLinks } from "../data/NavigationLinks";
 
 const EventDetails = ({ data }) => {
   const { html } = data.contentfulWydarzenia;
   const event = data.contentfulWydarzenia;
-  console.log(event);
+
+  const [activeLink, setActiveLink] = useState("lokalizacja");
+
+  const handleActiveLink = (path) => {
+    setActiveLink(path)
+  };
+
+  console.log(activeLink)
 
   return (
     <Layout>
@@ -16,7 +30,13 @@ const EventDetails = ({ data }) => {
       </Wrapper>
       <Title>{event.title}</Title>
       <Content>
-        <p>test</p>
+        <Navigation>
+          <ul>
+            {NavigationLinks.map((link) => (
+              <li onClick={() => handleActiveLink(link.path)}>{link.name}</li>
+            ))}
+          </ul>
+        </Navigation>
         <div dangerouslySetInnerHTML={{ __html: html }} />
       </Content>
     </Layout>

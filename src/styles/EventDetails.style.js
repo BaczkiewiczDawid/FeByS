@@ -69,3 +69,25 @@ export const Title = styled.h1`
     margin-top: 6rem;
   }
 `;
+
+export const Navigation = styled.nav`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+
+  ul {
+    width: 95vw;
+
+    li {
+      background-color: grey;
+      width: 100%;
+      text-align: center;
+      padding: 1rem 0;
+      margin: 0.5rem 0;
+      cursor: pointer;
+      list-style: none;
+    }
+  }
+`;

@@ -48,6 +48,10 @@ export const Overlay = styled.div`
 
 export const Content = styled.section`
   margin-top: 8rem;
+
+  @media screen and (min-width: 1440px) {
+    margin-top: 12rem;
+  }
 `;
 
 export const Title = styled.h1`
@@ -88,6 +92,47 @@ export const Navigation = styled.nav`
       margin: 0.5rem 0;
       cursor: pointer;
       list-style: none;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    ul {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      li {
+        width: auto;
+        background-color: transparent;
+        padding: .65rem 1.2rem;
+        text-align: center;
+        font-size: .7rem;
+        border-right: 1px solid #2a2a2a;
+
+        &:last-child {
+          border-right: none;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 1080px) {
+    ul {
+      li {
+        font-size: .9rem;
+        padding: .65rem 1.6rem;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1440px) {
+    ul {
+      li {
+        font-size: 1.1rem;
+        padding: 1rem 2rem;
+      }
     }
   }
 `;

@@ -7,6 +7,10 @@ import {
   Content,
   Title,
   Navigation,
+  Container,
+  Details,
+  Main,
+  Map,
 } from "../styles/EventDetails.style";
 import { NavigationLinks } from "../data/NavigationLinks";
 
@@ -17,10 +21,18 @@ const EventDetails = ({ data }) => {
   const [activeLink, setActiveLink] = useState("lokalizacja");
 
   const handleActiveLink = (path) => {
-    setActiveLink(path)
+    setActiveLink(path);
   };
 
-  console.log(activeLink)
+  console.log(activeLink);
+
+  const defaultProps = {
+    center: {
+      lat: 10.99835602,
+      lng: 77.01502627,
+    },
+    zoom: 11,
+  };
 
   return (
     <Layout>
@@ -37,6 +49,20 @@ const EventDetails = ({ data }) => {
             ))}
           </ul>
         </Navigation>
+        <Container>
+          <h2>Lokalizacja</h2>
+          <Main>
+            <Details>
+              <p>ul. Zwycięstwa 24</p>
+              <p>44-100, Gliwice</p>
+              <p>12.01.2023 14:00</p>
+            </Details>
+            <Map>
+
+            </Map>
+          </Main>
+        </Container>
+
         <div dangerouslySetInnerHTML={{ __html: html }} />
       </Content>
     </Layout>

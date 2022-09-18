@@ -106,9 +106,9 @@ export const Navigation = styled.nav`
       li {
         width: auto;
         background-color: transparent;
-        padding: .65rem 1.2rem;
+        padding: 0.65rem 1.2rem;
         text-align: center;
-        font-size: .7rem;
+        font-size: 0.7rem;
         border-right: 1px solid #2a2a2a;
 
         &:last-child {
@@ -121,8 +121,8 @@ export const Navigation = styled.nav`
   @media screen and (min-width: 1080px) {
     ul {
       li {
-        font-size: .9rem;
-        padding: .65rem 1.6rem;
+        font-size: 0.9rem;
+        padding: 0.65rem 1.6rem;
       }
     }
   }
@@ -135,4 +135,41 @@ export const Navigation = styled.nav`
       }
     }
   }
+`;
+
+export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  color: #2a2a2a;
+  margin-left: 1rem;
+  margin-top: 3rem;
+  justify-content: center;
+  align-items: flex-start;
+  width: 95vw;
+
+  h2 {
+    font-size: 2.5rem;
+  }
+`;
+
+export const Main = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const Details = styled.div`
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.5rem;
+  
+  p {
+    padding: .5rem 1rem;
+  }
+`;
+
+export const Map = styled.div`
+  background-color: blue;
+  width: 90vw;
+  height: 15rem;
+  margin: 3rem auto;
 `;

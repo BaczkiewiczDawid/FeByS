@@ -5,18 +5,11 @@ export const Container = styled.div`
   flex-direction: column;
   color: #2a2a2a;
   margin-left: 1rem;
-  margin-top: 3rem;
   justify-content: center;
   align-items: flex-start;
-  width: 95vw;
 
   h2 {
     font-size: 2.5rem;
-  }
-
-  @media screen and (min-width: 768px) {
-    margin: 3rem auto;
-    width: 80vw;
   }
 `;
 

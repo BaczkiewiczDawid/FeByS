@@ -13,6 +13,8 @@ import {
   Map,
 } from "../styles/EventDetails.style";
 import { NavigationLinks } from "../data/NavigationLinks";
+import Location from "../components/Events/Location";
+import Statute from '../components/Events/Statute';
 
 const EventDetails = ({ data }) => {
   const { html } = data.contentfulWydarzenia;
@@ -49,20 +51,8 @@ const EventDetails = ({ data }) => {
             ))}
           </ul>
         </Navigation>
-        <Container>
-          <h2>Lokalizacja</h2>
-          <Main>
-            <Details>
-              <p>ul. Zwycięstwa 24</p>
-              <p>44-100, Gliwice</p>
-              <p>12.01.2023 14:00</p>
-            </Details>
-            <Map>
-
-            </Map>
-          </Main>
-        </Container>
-
+        {activeLink === "lokalizacja" && <Location />}
+        {activeLink === "regulamin" && <Statute />}
         <div dangerouslySetInnerHTML={{ __html: html }} />
       </Content>
     </Layout>

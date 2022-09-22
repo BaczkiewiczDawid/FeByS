@@ -1,15 +1,12 @@
 import styled from "styled-components";
 
-export const Title = styled.h2`
-  text-align: center;
-`;
-
 export const StatuteWrapper = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: start;
   margin: 0 auto;
+  width: 90%;
 
   h3 {
     margin-top: 3rem;

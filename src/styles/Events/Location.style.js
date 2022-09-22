@@ -7,10 +7,6 @@ export const Container = styled.div`
   margin-left: 1rem;
   justify-content: center;
   align-items: flex-start;
-
-  h2 {
-    font-size: 2.5rem;
-  }
 `;
 
 export const Main = styled.div`

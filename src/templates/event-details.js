@@ -15,6 +15,7 @@ import {
 import { NavigationLinks } from "../data/NavigationLinks";
 import Location from "../components/Events/Location";
 import Statute from '../components/Events/Statute';
+import RoutesAndProfiles from "../components/Events/RoutesAndProfiles";
 
 const EventDetails = ({ data }) => {
   const { html } = data.contentfulWydarzenia;
@@ -53,6 +54,7 @@ const EventDetails = ({ data }) => {
         </Navigation>
         {activeLink === "lokalizacja" && <Location />}
         {activeLink === "regulamin" && <Statute />}
+        {activeLink === 'trasy-i-profile' && <RoutesAndProfiles />}
         <div dangerouslySetInnerHTML={{ __html: html }} />
       </Content>
     </Layout>

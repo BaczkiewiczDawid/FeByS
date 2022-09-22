@@ -12,4 +12,8 @@ export const StyledWrapper = styled.div`
     @media screen and (min-width: 1080px) {
         width: 70vw;
     }
+
+    h2 {
+        margin-left: 1rem;
+    }
 `;

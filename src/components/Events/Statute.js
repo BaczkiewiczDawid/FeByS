@@ -1,11 +1,11 @@
 import React from "react";
-import { Title, StatuteWrapper } from "../../styles/Events/Statute.style";
+import { StatuteWrapper } from "../../styles/Events/Statute.style";
 import Wrapper from "../../components/Events/Wrapper";
 
 const Statute = () => {
   return (
     <Wrapper>
-      <Title>Regulamin cyklu Wiosenne Zawody</Title>
+      <h2>Regulamin cyklu Wiosenne Zawody</h2>
         <StatuteWrapper>
           <h3>Podpunk 1</h3>
           <p>

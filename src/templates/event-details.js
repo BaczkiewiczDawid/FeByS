@@ -17,6 +17,7 @@ import Location from "../components/Events/Location";
 import Statute from "../components/Events/Statute";
 import RoutesAndProfiles from "../components/Events/RoutesAndProfiles";
 import PriceList from "../components/Events/PriceList";
+import Photos from '../components/Events/Photos';
 
 const EventDetails = ({ data }) => {
   const { html } = data.contentfulWydarzenia;
@@ -57,6 +58,7 @@ const EventDetails = ({ data }) => {
         {activeLink === "regulamin" && <Statute />}
         {activeLink === "trasy-i-profile" && <RoutesAndProfiles />}
         {activeLink === "cennik" && <PriceList />}
+        {activeLink === 'zdjecia' && <Photos />}
         <div dangerouslySetInnerHTML={{ __html: html }} />
       </Content>
     </Layout>

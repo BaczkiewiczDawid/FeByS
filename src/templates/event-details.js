@@ -39,6 +39,12 @@ const EventDetails = ({ data }) => {
     zoom: 11,
   };
 
+  console.log(data)
+
+  const { street, postalCode, City, date } = data.contentfulWydarzenia;
+
+  console.log(street)
+
   return (
     <Layout>
       <Wrapper>
@@ -54,7 +60,7 @@ const EventDetails = ({ data }) => {
             ))}
           </ul>
         </Navigation>
-        {activeLink === "lokalizacja" && <Location />}
+        {activeLink === "lokalizacja" && <Location street={street} city={City} postalCode={postalCode} date={date} />}
         {activeLink === "regulamin" && <Statute />}
         {activeLink === "trasy-i-profile" && <RoutesAndProfiles />}
         {activeLink === "cennik" && <PriceList />}
@@ -76,6 +82,14 @@ export const query = graphql`
       description {
         description
       }
+    }
+
+    contentfulWydarzenia(slug: { eq: $slug }) {
+      slug
+      postalCode
+      street
+      City
+      date
     }
   }
 `;

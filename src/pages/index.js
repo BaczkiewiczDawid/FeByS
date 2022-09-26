@@ -11,7 +11,7 @@ import {
   Footer,
   LogoWrapper,
   MainInformations,
-  SocialsWrapper
+  SocialsWrapper,
 } from "../styles/Home.style";
 import NewsList from "../components/Home/NewsList";
 import EventsList from "../components/Home/EventsList";
@@ -39,7 +39,6 @@ const responsive = {
 
 const Home = ({ data }) => {
   const eventsList = data.allContentfulWydarzenia.nodes;
-  console.log(eventsList)
 
   return (
     <Layout>
@@ -49,7 +48,7 @@ const Home = ({ data }) => {
       </Wrapper>
       <NewsWrapper>
         <h1>Aktualności</h1>
-        <NewsList />
+        <NewsList news={data.allContentfulAktualnosci} />
         <StyledLink to="/aktualnosci">Zobacz więcej</StyledLink>
       </NewsWrapper>
       <EventsWrapper>
@@ -87,6 +86,19 @@ export const query = graphql`
         date
       }
     }
+
+    allContentfulAktualnosci(limit: 3) {
+      nodes {
+        title
+        content {
+          content
+        }
+        image {
+          url
+        }
+        slug
+      }
+    }
   }
-`
+`;
 export default Home;

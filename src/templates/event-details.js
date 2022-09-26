@@ -41,7 +41,7 @@ const EventDetails = ({ data }) => {
 
   console.log(data)
 
-  const { street, postalCode, City, date } = data.contentfulWydarzenia;
+  const { street, postalCode, city, date } = data.contentfulWydarzenia;
 
   console.log(street)
 
@@ -60,7 +60,7 @@ const EventDetails = ({ data }) => {
             ))}
           </ul>
         </Navigation>
-        {activeLink === "lokalizacja" && <Location street={street} city={City} postalCode={postalCode} date={date} />}
+        {activeLink === "lokalizacja" && <Location street={street} city={city} postalCode={postalCode} date={date} />}
         {activeLink === "regulamin" && <Statute />}
         {activeLink === "trasy-i-profile" && <RoutesAndProfiles />}
         {activeLink === "cennik" && <PriceList />}
@@ -88,7 +88,7 @@ export const query = graphql`
       slug
       postalCode
       street
-      City
+      city
       date
     }
   }

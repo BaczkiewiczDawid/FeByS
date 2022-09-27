@@ -6,30 +6,33 @@ import NavigationContent from "./NavigationContent";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [width, setWidth] = useState(window.innerWidth);
+  const [width, setWidth] = useState();
 
-  window.addEventListener("resize", () => {
-    setWidth(window.innerWidth);
+  const isBrowser = typeof window !== "undefined";
 
-    if (window.innerWidth >= 768) {
-      setIsOpen(false);
-    }
-  });
+  if (isBrowser) {
+
+    window.addEventListener("resize", () => {
+      setWidth(window.innerWidth);
+
+      if (window.innerWidth >= 768) {
+        setIsOpen(false);
+      }
+    });
+  }
 
   return (
     <Navigation>
       <Logo src={logo} alt="FeByS" />
       <NavigationContent />
-      {width < 768 && (
+      {isBrowser && window.innerWidth < 768 && (
         <HamburgerWrapper>
-          <Hamburger
-            toggled={isOpen}
-            toggle={setIsOpen}
-            color="#fafafa"
-          />
+          <Hamburger toggled={isOpen} toggle={setIsOpen} color="#fafafa" />
         </HamburgerWrapper>
       )}
-      {isOpen && width < 768 && <NavigationContent isOpen={isOpen ? true : false} />}
+      {isOpen && width < 768 && (
+        <NavigationContent isOpen={isOpen ? true : false} />
+      )}
     </Navigation>
   );
 };

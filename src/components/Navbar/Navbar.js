@@ -4,7 +4,7 @@ import { Navigation, Logo, HamburgerWrapper } from "../../styles/Navbar.style";
 import Hamburger from "hamburger-react";
 import NavigationContent from "./NavigationContent";
 
-const Navbar = () => {
+const Navbar = ({ secondary }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [width, setWidth] = useState();
 
@@ -27,7 +27,7 @@ const Navbar = () => {
       <NavigationContent />
       {isBrowser && window.innerWidth < 768 && (
         <HamburgerWrapper>
-          <Hamburger toggled={isOpen} toggle={setIsOpen} color="#fafafa" />
+          <Hamburger toggled={isOpen} toggle={setIsOpen} color={secondary === true ? "#2a2a2a" : "#fafafa"} />
         </HamburgerWrapper>
       )}
       {isOpen && width < 768 && (

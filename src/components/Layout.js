@@ -3,11 +3,11 @@ import GlobalStyle from "../styles/GlobalStyle";
 import Navbar from "./Navbar/Navbar";
 import Footer from './Footer/Footer';
 
-const Layout = ({ children }) => {
+const Layout = ({ children, secondary }) => {
   return (
     <>
       <GlobalStyle />
-      <Navbar />
+      <Navbar secondary={secondary} />
       <div>{children}</div>
       <Footer />
     </>

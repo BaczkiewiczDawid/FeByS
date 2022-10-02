@@ -33,6 +33,7 @@ export const Wrapper = styled.div`
     a {
       margin: 0 1rem;
       text-align: center;
+      color: ${props => props.secondary ? '#2a2a2a' : '#fafafa'};
     }
   }
 `;

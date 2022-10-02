@@ -24,7 +24,7 @@ const Navbar = ({ secondary }) => {
   return (
     <Navigation>
       <Logo src={logo} alt="FeByS" />
-      <NavigationContent />
+      <NavigationContent secondary={secondary} />
       {isBrowser && window.innerWidth < 768 && (
         <HamburgerWrapper>
           <Hamburger toggled={isOpen} toggle={setIsOpen} color={secondary === true ? "#2a2a2a" : "#fafafa"} />

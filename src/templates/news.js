@@ -13,10 +13,39 @@ const News = () => {
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta ipsum
           iure qui id, error nemo reiciendis, dolore placeat asperiores ab
           voluptas voluptatum est rerum velit magni dicta labore tempora!
-          Officiis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta ipsum
+          Officiis. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Soluta ipsum iure qui id, error nemo reiciendis, dolore placeat
+          asperiores ab voluptas voluptatum est rerum velit magni dicta labore
+          tempora! Officiis.
+        </p>
+
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta ipsum
           iure qui id, error nemo reiciendis, dolore placeat asperiores ab
           voluptas voluptatum est rerum velit magni dicta labore tempora!
-          Officiis.
+          Officiis. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Soluta ipsum iure qui id, error nemo reiciendis, dolore placeat
+          asperiores ab voluptas voluptatum est rerum velit magni dicta labore
+          tempora! Officiis.
+        </p>
+
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta ipsum
+          iure qui id, error nemo reiciendis, dolore placeat asperiores ab
+          voluptas voluptatum est rerum velit magni dicta labore tempora!
+          Officiis. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Soluta ipsum iure qui id, error nemo reiciendis, dolore placeat
+          asperiores ab voluptas voluptatum est rerum velit magni dicta labore
+          tempora! Officiis.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta ipsum
+          iure qui id, error nemo reiciendis, dolore placeat asperiores ab
+          voluptas voluptatum est rerum velit magni dicta labore tempora!
+          Officiis. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Soluta ipsum iure qui id, error nemo reiciendis, dolore placeat
+          asperiores ab voluptas voluptatum est rerum velit magni dicta labore
+          tempora! Officiis.
         </p>
       </Content>
     </Layout>

@@ -47,7 +47,7 @@ exports.createPages = async ({ graphql, actions }) => {
     actions.createPage({
       path: "/aktualnosci/" + node.slug,
       component: require.resolve("./src/templates/news.js"),
-      content: { slug: node.slug },
+      context: { slug: node.slug },
     });
   });
 };

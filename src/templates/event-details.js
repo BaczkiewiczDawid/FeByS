@@ -1,16 +1,12 @@
 import React, { useState } from "react";
 import Layout from "../components/Layout";
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
 import {
   Overlay,
   Wrapper,
   Content,
   Title,
   Navigation,
-  Container,
-  Details,
-  Main,
-  Map,
 } from "../styles/EventDetails.style";
 import { NavigationLinks } from "../data/NavigationLinks";
 import Location from "../components/Events/Location";

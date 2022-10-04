@@ -5,9 +5,9 @@ import {
   SocialsWrapper,
 } from "../../styles/Footer.style";
 import { Link } from "gatsby";
-// import facebookIcon from "../../images/facebook.png";
-// import youtubeIcon from "../../images/youtube.png";
-// import instagramIcon from "../../images/instagram.png";
+import facebookIcon from "../../images/facebook.png";
+import youtubeIcon from "../../images/youtube.png";
+import instagramIcon from "../../images/instagram.png";
 
 const Footer = () => {
   return (
@@ -23,7 +23,7 @@ const Footer = () => {
         <p>KONTO 34 2030 0045 1110 0000 0226 3570</p>
       </MainInformations>
       <SocialsWrapper>
-        {/* <Link to="/">
+        <Link to="/">
           <img src={facebookIcon} alt="FeByS Facebook" />
         </Link>
         <Link to="/">
@@ -31,7 +31,7 @@ const Footer = () => {
         </Link>
         <Link to="/">
           <img src={instagramIcon} alt="FeByS Instagram" />
-        </Link> */}
+        </Link>
       </SocialsWrapper>
     </Wrapper>
   );

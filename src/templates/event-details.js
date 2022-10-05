@@ -27,8 +27,6 @@ const EventDetails = ({ data }) => {
 
   const { street, postalCode, city, date } = data.contentfulWydarzenia;
 
-  console.log(street)
-
   return (
     <Layout>
       <Wrapper>

@@ -14,16 +14,12 @@ import Statute from "../components/Events/Statute";
 import RoutesAndProfiles from "../components/Events/RoutesAndProfiles";
 import PriceList from "../components/Events/PriceList";
 import Photos from '../components/Events/Photos';
+import useActiveLink from "../hooks/useActiveLink";
 
 const EventDetails = ({ data }) => {
   const { html } = data.contentfulWydarzenia;
   const event = data.contentfulWydarzenia;
-
-  const [activeLink, setActiveLink] = useState("lokalizacja");
-
-  const handleActiveLink = (path) => {
-    setActiveLink(path);
-  };
+  const { activeLink, handleActiveLink } = useActiveLink('lokalizacja')
 
   const { street, postalCode, city, date } = data.contentfulWydarzenia;
 

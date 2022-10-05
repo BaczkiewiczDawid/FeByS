@@ -25,18 +25,6 @@ const EventDetails = ({ data }) => {
     setActiveLink(path);
   };
 
-  console.log(activeLink);
-
-  const defaultProps = {
-    center: {
-      lat: 10.99835602,
-      lng: 77.01502627,
-    },
-    zoom: 11,
-  };
-
-  console.log(data)
-
   const { street, postalCode, city, date } = data.contentfulWydarzenia;
 
   console.log(street)

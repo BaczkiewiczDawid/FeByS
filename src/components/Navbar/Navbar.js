@@ -3,6 +3,7 @@ import logo from "../../images/logo.png";
 import { Navigation, Logo, HamburgerWrapper } from "../../styles/Navbar.style";
 import Hamburger from "hamburger-react";
 import NavigationContent from "./NavigationContent";
+import { Link } from "gatsby";
 
 const Navbar = ({ secondary }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,7 +12,6 @@ const Navbar = ({ secondary }) => {
   const isBrowser = typeof window !== "undefined";
 
   if (isBrowser) {
-
     window.addEventListener("resize", () => {
       setWidth(window.innerWidth);
 
@@ -23,11 +23,17 @@ const Navbar = ({ secondary }) => {
 
   return (
     <Navigation>
-      <Logo src={logo} alt="FeByS" />
+      <Link to="/">
+        <Logo src={logo} alt="FeByS" />
+      </Link>
       <NavigationContent secondary={secondary} />
       {isBrowser && window.innerWidth < 768 && (
         <HamburgerWrapper>
-          <Hamburger toggled={isOpen} toggle={setIsOpen} color={secondary === true ? "#2a2a2a" : "#fafafa"} />
+          <Hamburger
+            toggled={isOpen}
+            toggle={setIsOpen}
+            color={secondary === true ? "#2a2a2a" : "#fafafa"}
+          />
         </HamburgerWrapper>
       )}
       {isOpen && width < 768 && (

@@ -5,7 +5,8 @@ import backgroundImage from "../images/dummyImage.jpg";
 import { Content, Container } from "../styles/About/About.style";
 import useActiveLink from "../hooks/useActiveLink";
 import { AboutLinks } from "../data/AboutLinks";
-import Association from '../components/About/Association';
+import Association from "../components/About/Association";
+import Contact from "../components/About/Contact";
 
 const About = () => {
   const { activeLink, handleActiveLink } = useActiveLink("o-stowarzyszeniu");
@@ -25,7 +26,8 @@ const About = () => {
           </ul>
         </Navigation>
         <Content>
-          <Association />
+          {activeLink === "o-stowarzyszeniu" && <Association />}
+          {activeLink === "kontakt" && <Contact />}
         </Content>
       </Container>
     </Layout>

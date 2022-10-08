@@ -7,6 +7,7 @@ import useActiveLink from "../hooks/useActiveLink";
 import { AboutLinks } from "../data/AboutLinks";
 import Association from "../components/About/Association";
 import Contact from "../components/About/Contact";
+import Statute from '../components/About/Statute';
 
 const About = () => {
   const { activeLink, handleActiveLink } = useActiveLink("o-stowarzyszeniu");
@@ -28,6 +29,7 @@ const About = () => {
         <Content>
           {activeLink === "o-stowarzyszeniu" && <Association />}
           {activeLink === "kontakt" && <Contact />}
+          {activeLink === 'statut' && <Statute />}
         </Content>
       </Container>
     </Layout>

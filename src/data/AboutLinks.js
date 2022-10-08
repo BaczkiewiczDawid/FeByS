@@ -13,7 +13,7 @@ export const AboutLinks = [
     },
     {
         name: 'Statut',
-        path: 'status'
+        path: 'statut'
     },
     {
         name: 'Kontakt',

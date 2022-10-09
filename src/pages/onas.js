@@ -9,6 +9,7 @@ import Association from "../components/About/Association";
 import Contact from "../components/About/Contact";
 import Statute from '../components/About/Statute';
 import Structure from '../components/About/Structure';
+import Download from '../components/About/Download';
 
 const About = () => {
   const { activeLink, handleActiveLink } = useActiveLink("o-stowarzyszeniu");
@@ -32,6 +33,7 @@ const About = () => {
           {activeLink === "kontakt" && <Contact />}
           {activeLink === 'statut' && <Statute />}
           {activeLink === 'struktura' && <Structure />}
+          {activeLink === 'dokumenty-do-pobrania' && <Download />}
         </Content>
       </Container>
     </Layout>

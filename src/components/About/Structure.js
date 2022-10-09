@@ -1,11 +1,11 @@
 import React from "react";
 import {
-  Wrapper,
   Item,
   MainInfo,
   ItemsWrapper,
   Title
 } from "../../styles/About/Structure.style";
+import Wrapper from './Wrapper';
 
 const Structure = () => {
   return (

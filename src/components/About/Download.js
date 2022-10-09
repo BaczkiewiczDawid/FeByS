@@ -1,6 +1,6 @@
 import React from "react";
-import { Wrapper } from "../../styles/About/Structure.style";
-import { FilesWrapper } from '../../styles/About/Download.style';
+import Wrapper from './Wrapper'
+import { FilesWrapper } from "../../styles/About/Download.style";
 
 const Download = () => {
   return (

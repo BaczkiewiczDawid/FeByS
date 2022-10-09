@@ -1,9 +1,7 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.section`
+export const Container = styled.section`
   width: 90vw;
-  margin-left: 50%;
-  transform: translateX(-50%);
   margin-top: 1rem;
 
   h2 {

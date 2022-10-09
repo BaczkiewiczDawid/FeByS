@@ -1,8 +1,9 @@
 import React from "react";
+import Wrapper from './Wrapper'
 
 const Association = () => {
   return (
-    <div>
+    <Wrapper>
       <p>
         Celem stowarzyszenia jest działalność sportowo – edukacyjna zachęcająca
         do zdrowego stylu życia rozumianego, jako połączenie aktywności
@@ -23,7 +24,7 @@ const Association = () => {
         Stowarzyszenia oraz osób wyrażających chęć uczestnictwa w projektach
         realizowanych przez Stowarzyszenie.
       </p>
-    </div>
+    </Wrapper>
   );
 };
 

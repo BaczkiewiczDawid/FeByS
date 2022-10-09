@@ -4,9 +4,6 @@ export const ItemsWrapper = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  width: 90vw;
-  margin-left: 50%;
-  transform: translateX(-50%);
 
   @media screen and (min-width: 768px) {
     width: 80vw;

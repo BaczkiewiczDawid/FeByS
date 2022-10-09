@@ -1,23 +1,5 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.section`
-    width: 90vw;
-    margin: 0 auto;
-    color: #2a2a2a;
-
-    @media screen and (min-width: 768px) {
-        width: 80vw;
-    }
-
-    @media screen and (min-width: 1080px) {
-        width: 70vw;
-    }
-
-    @media screen and (min-width: 1440px) {
-        width: 60vw;
-    }
-`;
-
 export const Item = styled.article`
     display: flex;
     flex-direction: column;
@@ -65,8 +47,4 @@ export const ItemsWrapper = styled.div`
 
 export const Title = styled.h2`
     margin-top: 2rem;
-
-    @media screen and (min-width: 1080px) {
-        margin-top: 5rem;
-    }
 `;

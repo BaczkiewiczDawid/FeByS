@@ -52,3 +52,7 @@ export const Content = styled.section`
     }
   }
 `;
+
+export const Container = styled.div`
+  color: #fafafa;
+`;

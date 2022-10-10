@@ -7,7 +7,7 @@ const NavigationContent = ({ isOpen, secondary }) => {
   return (
     <Wrapper isOpen={isOpen} secondary={secondary}>
       <Link to="/onas">O nas</Link>
-      <Link to="/aktualności">Aktualności</Link>
+      <Link to="/aktualnosci">Aktualności</Link>
       <Link to="/zawody">Zawody</Link>
       <Link to="/sponsorzy-i-partnerzy">Sponsorzy & Partnerzy</Link>
       <Link to="/kontakt">Kontakt</Link>

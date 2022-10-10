@@ -19,6 +19,7 @@ export const SingleNewsWrapper = styled.article`
     left: 1rem;
     font-size: 1.5rem;
     text-align: start;
+    color: #fafafa;
   }
 
   &:hover {

@@ -4,7 +4,7 @@ import { Link } from "gatsby";
 
 const SingleNews = ({ image, alt, title, slug }) => {
   return (
-    <Link to={`aktualnosci/${slug}`}>
+    <Link to={`/aktualnosci/${slug}`}>
       <SingleNewsWrapper>
         <img src={image} alt={alt} />
         <h2>{title}</h2>

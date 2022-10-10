@@ -8,24 +8,6 @@ const NewsList = ({ news }) => {
 
   return (
     <Wrapper>
-      {/* <SingleNews
-        image={dummyImage}
-        alt="dummyImage"
-        title="Tytuł 1"
-        slug="article-1"
-      />
-      <SingleNews
-        image={dummyImage}
-        alt="dummyImage"
-        title="Tytuł 2"
-        slug="article-2"
-      />
-      <SingleNews
-        image={dummyImage}
-        alt="dummyImage"
-        title="Tytuł 3"
-        slug="article-3"
-      /> */}
       {news.nodes.map((el) => (
         <SingleNews
           image={el.image.url}

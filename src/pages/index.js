@@ -7,16 +7,12 @@ import {
   NewsWrapper,
   StyledLink,
   EventsWrapper,
-  SponsorsWrapper,
-  Footer,
-  LogoWrapper,
-  MainInformations,
-  SocialsWrapper,
+  SponsorsWrapper
 } from "../styles/Home.style";
 import NewsList from "../components/Home/NewsList";
 import EventsList from "../components/Home/EventsList";
-import logo from "../images/logo.png";
 import { graphql } from "gatsby";
+import SponsorsList from "../components/Sponsors/SponsorsList";
 
 const responsive = {
   superLargeDesktop: {
@@ -54,18 +50,11 @@ const Home = ({ data }) => {
       <EventsWrapper>
         <h2>Zawody</h2>
         <EventsList data={eventsList} />
+        <StyledLink to="/zawody">Zobacz więcej</StyledLink>
       </EventsWrapper>
-      <SponsorsWrapper>
+      <SponsorsWrapper id="sponsors">
         <h2>Sponsorzy & Partnerzy</h2>
-        <LogoWrapper>
-          <img src={logo} alt="" />
-          <img src={logo} alt="" />
-          <img src={logo} alt="" />
-          <img src={logo} alt="" />
-          <img src={logo} alt="" />
-          <img src={logo} alt="" />
-          <img src={logo} alt="" />
-        </LogoWrapper>
+        <SponsorsList />
       </SponsorsWrapper>
     </Layout>
   );
@@ -73,7 +62,7 @@ const Home = ({ data }) => {
 
 export const query = graphql`
   query {
-    allContentfulWydarzenia {
+    allContentfulWydarzenia(limit: 3) {
       nodes {
         title
         description {

@@ -3,6 +3,7 @@ import Layout from "../components/Layout";
 import Wrapper from "../components/About/Wrapper";
 import { graphql } from 'gatsby';
 import EventsList from '../components/Home/EventsList';
+import { Title } from '../styles/Sponsors/Sponsors.style';
 
 const Events = ({ data }) => {
     console.log(data.allContentfulWydarzenia.nodes)
@@ -10,6 +11,7 @@ const Events = ({ data }) => {
   return (
     <Layout secondary>
       <Wrapper>
+        <Title>Zawody</Title>
         <EventsList data={data.allContentfulWydarzenia.nodes} />
       </Wrapper>
     </Layout>

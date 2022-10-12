@@ -9,7 +9,7 @@ import defaultImage from "../../images/dummyImage.jpg";
 
 const SingleEvent = ({ title, image = defaultImage, alt, details, slug }) => {
   return (
-    <Link to={`zawody/${slug}`}>
+    <Link to={`/zawody/${slug}`}>
       <SingleEventWrapper>
         <img src={image} alt={alt} />
         <ImageOverlay />

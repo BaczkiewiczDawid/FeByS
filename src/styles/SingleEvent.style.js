@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const SingleEventWrapper = styled.article`
-  width: 90vw;
-  height: 12rem;
+  width: 80vw;
+  height: 40rem;
   position: relative;
   margin: 2rem 0;
   cursor: pointer;
@@ -20,20 +20,20 @@ export const SingleEventWrapper = styled.article`
 
   @media screen and (min-width: 768px) {
     width: 27vw;
-    height: 8rem;
+    height: 18rem;
     margin: 2rem 1rem;
   }
 
   @media screen and (min-width: 1080px) {
-    width: 25vw;
-    height: 11rem;
-    margin: 2rem 1rem;
+    width: 23vw;
+    height: 21rem;
+    margin: 2rem 2rem;
   }
 
   @media screen and (min-width: 1440px) {
-    width: 22vw;
-    height: 16rem;
-    margin: 2rem 2rem;
+    width: 18vw;
+    height: 22rem;
+    margin: 2rem 4rem;
   }
 `;
 

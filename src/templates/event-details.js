@@ -13,13 +13,14 @@ import Location from "../components/Events/Location";
 import Statute from "../components/Events/Statute";
 import RoutesAndProfiles from "../components/Events/RoutesAndProfiles";
 import PriceList from "../components/Events/PriceList";
-import Photos from '../components/Events/Photos';
+import Photos from "../components/Events/Photos";
 import useActiveLink from "../hooks/useActiveLink";
+import Results from "../components/Events/Results";
 
 const EventDetails = ({ data }) => {
   const { html } = data.contentfulWydarzenia;
   const event = data.contentfulWydarzenia;
-  const { activeLink, handleActiveLink } = useActiveLink('lokalizacja')
+  const { activeLink, handleActiveLink } = useActiveLink("lokalizacja");
 
   const { street, postalCode, city, date } = data.contentfulWydarzenia;
 
@@ -38,11 +39,19 @@ const EventDetails = ({ data }) => {
             ))}
           </ul>
         </Navigation>
-        {activeLink === "lokalizacja" && <Location street={street} city={city} postalCode={postalCode} date={date} />}
+        {activeLink === "lokalizacja" && (
+          <Location
+            street={street}
+            city={city}
+            postalCode={postalCode}
+            date={date}
+          />
+        )}
         {activeLink === "regulamin" && <Statute />}
         {activeLink === "trasy-i-profile" && <RoutesAndProfiles />}
         {activeLink === "cennik" && <PriceList />}
-        {activeLink === 'zdjecia' && <Photos />}
+        {activeLink === "zdjecia" && <Photos />}
+        {activeLink === "wyniki" && <Results />}
         <div dangerouslySetInnerHTML={{ __html: html }} />
       </Content>
     </Layout>

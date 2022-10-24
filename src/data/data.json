@@ -1,0 +1,21 @@
+﻿{
+    "Arkusz1": [
+        {
+            "open": "1",
+            "katNum": "1",
+            "kat": "M40",
+            "name": "Mirosław Lubszczyk",
+            "team": "FeByS Bike Team",
+            "time": "2:45:33"
+        },
+        {
+            "open": "2",
+            "katNum": "1",
+            "kat": "M30",
+            "name": "Dawid Bączkiewicz",
+            "team": "KFC",
+            "time": "3:22:45",
+            "penalty": "0:10:00"
+        }
+    ]
+}

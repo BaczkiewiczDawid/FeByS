@@ -1,14 +1,13 @@
 import React from "react";
 import Wrapper from "./Wrapper";
 import data from "../../data/data.json";
-
-console.log(data.Arkusz1);
+import { Table } from '../../styles/Events/Results.style';
 
 const Results = () => {
   return (
     <Wrapper>
       <h2>Wyniki</h2>
-      <table>
+      <Table>
         <th>Open</th>
         <th>Kat.</th>
         <th>Kat</th>
@@ -24,10 +23,10 @@ const Results = () => {
             <td>{el.name}</td>
             <td>{el.team}</td>
             <td>{el.time}</td>
-            <td>{el.penalty}</td>
+            <td>{el.penalty ? el.penalty : '00:00:00'}</td>
           </tr>
         ))}
-      </table>
+      </Table>
     </Wrapper>
   );
 };
